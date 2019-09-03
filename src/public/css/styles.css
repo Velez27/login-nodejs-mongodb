@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #4e54c8;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(80px, auto) 1fr 80px;
+    grid-template-areas:    "header header header"
+                            "body body body"
+                            "footer footer footer";
+    justify-items: center;
+}
+
+/* NAVEGACION // CABECERA */
+.cabecera {
+    grid-area: header;
+    align-self: center;
+    width: 100%;
+}
+
+.cabecera h2 {
+    padding: 0 0 0 10px;
+    margin: 10px 10px 10px 10px;
+    font-size: 50px;
+    text-align: left;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.cabecera ul {
+    text-align: right;
+    margin: 0 40px 20px 0;
+}
+
+.cabecera li {
+    display: inline-block;
+    list-style: none;
+    width: 120px;
+    height: 40px;
+    background: #4B79DE;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.cabecera li:hover {
+    background: #4898D4;
+}
+
+.cabecera a {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* VISTA DE INICIO */
+.cuerpo {
+    grid-area: body;
+    margin: 0 20px 0 20px;
+    text-align: justify;
+}
+
+/* VISTA DE INICIAR SESION */
+.login {
+    grid-area: body;
+    width: 600px;
+    border: 1px solid black;
+}
+
+.login .imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.login .imagen img {
+    width: 200px;
+    height: 200px;
+}
+
+.login .formulario,
+.register {
+    display: flex;
+    justify-content: center;
+}
+
+.login .formulario form,
+.register form {
+    width: 50%;
+}
+
+.login .formulario label,
+.login .formulario input, 
+.login .formulario button, 
+.register label, 
+.register input,
+.register button {
+    display: block;
+    justify-items: center;
+}
+
+.login .formulario label, 
+.register label {
+    font-size: 25px;
+    text-align: center;
+}
+
+.login .formulario input, 
+.register input {
+    font-size: 25px;
+    width: 100%;
+    color: #fff;
+    background: #4e54c8;
+    border: 1px solid white;
+}
+
+.login .formulario button,
+.register button {
+    width: 100%;
+    height: 40px;
+    background: #4B79DE;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.login .formulario button:hover,
+.register button:hover {
+    background: #4898D4;
+}
+
+/* VISTA DE REGISTRARSE */
+.register {
+    grid-area: body;
+    width: 600px;
+    border: 1px solid black;
+}
+
+/* FOOTER // PIE DE PAGINA*/
+.footer {
+    grid-area: footer;
+    width: 100%;
+    margin: 0 40px 0 0;
+    text-align: right;
+}
